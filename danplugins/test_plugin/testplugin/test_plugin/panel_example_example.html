@@ -1,0 +1,18 @@
+<html>
+<body>
+<script type="javascript">
+import * as d3 from "d3";
+import * as d3hexbin from "d3-hexbin";
+
+export const initGrid = () => {
+    d3.select("#d3-map")
+      .append("svg")
+      .append("rect")
+      .attr("width", "100%")
+      .attr("height", "100%")
+      .attr("class", "d3-rect");
+};
+</script>
+<p>Yeah, right...</p>
+</body>
+</html>

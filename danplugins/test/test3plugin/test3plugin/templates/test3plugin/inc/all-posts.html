@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+All My Posts
+{% endblock %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static "test3plugin/post.css" %}" />
+<link rel="stylesheet" href="{% static "test3plugin/all-posts.css" %}" />
+{% endblock %}
+
+{% block content %}
+<section id="all-posts">
+    <h2>Mosaic Configurations</h2>
+    <ul>
+        {% for post_item in all_posts %}
+           {% include "test3plugin/inc/post-item.html" %}
+        {% endfor %}
+    </ul>
+</section>
+{% endblock %}
+
+{% block footer %}
+<div>(Footer)</div>
+{% endblock %}

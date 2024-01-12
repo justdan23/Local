@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+{{ post_item.title }}
+{% endblock %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static "test3plugin/post.css" %}" />
+<link rel="stylesheet" href="{% static "test3plugin/post-detail.css" %}" />
+{% endblock %}
+
+{% block content %}
+<section id="summary">
+    <h2>{{ post_item.title }}</h2>
+    <article>
+        <img src="{% static "test3plugin/images/"|add:'post_item.image' %}" alt="{{ post_item.title }}" />
+        <address>{{ post_item.author }}</address>
+        <div>
+            Last updated on <time>{{ post_item.date|date:"d M Y" }}</time>
+        </div>
+        <p>{{ post_item.excerpt }}</p>
+    </article>
+</section>
+
+<main>
+    <p>
+        {{ post_item.content }}  
+    </p>
+</main>
+
+{% endblock %}
+

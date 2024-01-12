@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "testplugin"
+version = "0.1.0"
+description = ""
+authors = ["Dan Swaney"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+"js.d3" = "^3.5.5"
+"js.d3_tip" = "^0.6.7"
+d3graph = "^2.5.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

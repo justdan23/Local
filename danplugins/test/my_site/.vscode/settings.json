@@ -1,0 +1,8 @@
+{
+    "[python]": {
+        "editor.semanticHighlighting.enabled": true
+    },
+    "editor.semanticHighlighting.enabled": true,
+  
+    "python.languageServer": "Pylance"
+}

@@ -1,0 +1,19 @@
+{% load static %}
+
+<li>
+    <article class="post_item">
+        {% if post_item.slug != '' %}
+        <!--<a href="\{\% url 'plugins:test3plugin:getPostDetailPage' post_item.slug \%\}">-->
+        {% else %}
+        <a href="">
+        {% endif %}
+            {% if post_item.image != undefined %}
+            <img src="{% static "test3plugin/images/"|add:post_item.image %}" alt="{{ post_item.title }}" />
+            {% endif %}
+            <div class="post_item__content">
+                <h3>{{ post_item.title }}</h3>
+                <p>{{ post_item.excerpt }}</p>
+            </div>
+        </a>
+    </article>
+</li>
